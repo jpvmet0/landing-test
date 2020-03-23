@@ -1,0 +1,528 @@
+/*primero saco todo el margen y padding*/
+/*cuando el ancho maximo sea desde 100px*/
+@media only screen and (min-width: 100px){ 
+*{
+    margin: 0;
+    padding:0;
+    border: 0;
+    
+}
+/*estilizo el body*/
+body {
+background: #ecf0f1;
+}
+/*estilizo el p*/
+p {
+    color: #524c56;
+    
+    font-size: 160%;
+    /*interlineado*/
+    line-height: 155%;
+    padding: 3%;
+    text-indent: 2%;
+    /*justificado*/
+    text-align: justify;
+
+
+    font-size: 100%;
+}
+
+
+
+
+
+
+
+
+h3 {
+    font-size: 100%;
+    line-height: 110%;
+    font-weight: 100;
+    color: #524c56;
+    text-align: center;
+    /*coloco todo el txto en mayuscula*/
+    text-transform: uppercase;
+    padding:0;
+         /*aca armo los ajustes de media query*/
+
+         height: 80px;
+}
+a {
+    /*sacamos el subrayado de link*/
+    text-decoration: none;
+    color: #524c56;
+    font-weight: bold;
+    }
+    /*pseudo clase a, para cuando asas por encima del link*/
+a:hover {
+    color:#c3d7df;
+
+}
+/*estilizamos las imagenes en general*/
+ img {
+     /*con esto hago que se comporte como elemnto de bloque*/
+    display: block;
+    margin: 0 auto;
+    /*ancho maximo*/
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-bottom: -4px;
+ }
+
+#wrapper {
+    /*le doy un ancho maximo, podria usar lo de media query*/
+    max-width: 600px;
+    /*margin:0 auto; 0 is for top-bottom and auto for left-right*/
+    margin: 0 auto;
+} 
+
+#banner-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 0 3% 0;
+}
+
+header {
+    /*no es como heigt, por que el ancho esta definido*/
+    width: 100%;
+    /*el height con %, sire si el cont tiene def pixeles*/
+    height: 100%;
+    top:0;
+    left:0;
+}
+
+header .header-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    /*para que td en el contenedor este centrado*/
+    align-items: center;
+    
+}
+
+header #logo img {
+    margin:10px;
+
+    /*float: left;*/
+    width:50px;
+    height:auto;
+    top:0;
+    left:0;
+    /*ajuste media query*/
+        margin: 15px, 0 20px, -25px;
+    
+}
+
+header #menu-icon{
+    
+    
+    /*con font-zise le pones el tamaño a los iconos*/
+    font-size: 10px;
+    margin: 25px;
+    display: inline-block;
+    
+}
+
+/*a todos los ul le saco los puntos*/
+ul {
+    list-style: none;
+}
+
+nav {
+    width: 80%;
+    height: auto;
+    padding: 2px, 2px,2px, 2px;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+ }
+
+
+nav ul li {
+    font-size: 40%;
+    margin: 5px;
+    
+}
+
+
+nav ul li a {
+    color: #6991ac;
+}
+
+/*current es que pagina o navegacion esta acitva*/
+nav ul li .actual {
+    color: #3f5767;
+
+}
+
+/*media query*/
+nav:hover ul {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+nav ul, nav:active{
+    display: none;
+    z-index: 1000;
+    
+}
+
+/*servicios uno*/
+div #first-onethird{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%,2%;
+}
+
+.servicios_para_eventos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+} 
+
+div #first-onethird .icon-wrap {
+margin: 0, auto;
+width: 125px;
+height: 125px;
+background-color: #6991ac;
+display: flex;
+flex-direction: column;
+/*lo alineo a lo largo y ancho*/
+align-items: center;
+justify-content: center;
+border-radius: 125px;
+}
+
+.icon-wrap i {
+display: flex;    
+font-size: 50px;
+border-radius: 125px;
+
+}
+
+
+/*servicios dos*/
+div #second-onethird{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div #second-onethird img {
+    width: 30%;
+    border-radius: 125px;
+}
+/*le doy color de fondo*/
+footer{
+    background: #2c3c50;
+}
+/*caja dentro del footer*/
+.icon-text{
+  
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*nav dentro del footer*/
+.icon-text-icon a{
+    color : #c3d7df;
+    font-size: 20px;
+    line-height: 150%;
+    }
+.icon-text-icon a:hover{
+    color : #f5f5f5;
+    }
+
+/*contenedor iconos dentro del footer*/    
+div .icon-text-text {
+    width: 40% ;
+    display: flex;
+    align-items: center;
+    }
+
+div .icon-text-text ul{
+    width: 100% ;
+    color : #c3d7df;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    }
+
+.icon-text-text a {
+
+        color :  #c3d7df;
+        font-size: 40px;
+        }
+
+.icon-text-text a:hover{
+    color : #f5f5f5;
+    font-size: 20px;
+    }
+
+
+}
+
+/*---------TERMINA MEDIA QUERY*/
+/*cuando el ancho maximo sea desde 600px*/
+@media only screen and (min-width: 600px){ 
+*{
+    margin: 0;
+    padding:0;
+    border: 0;
+}
+/*estilizo el body*/
+body {
+background: #ecf0f1;
+}
+/*estilizo el p*/
+p {
+    color: #524c56;
+    
+    font-size: 160%;
+    /*interlineado*/
+    line-height: 155%;
+    padding: 3%;
+    text-indent: 2%;
+    /*justificado*/
+    text-align: justify;
+}
+
+h3 {
+    font-size: 125%;
+    line-height: 155%;
+    font-weight: 500;
+    color: #524c56;
+    text-align: center;
+    /*coloco todo el txto en mayuscula*/
+    text-transform: uppercase;
+    padding:0;
+}
+a {
+    /*sacamos el subrayado de link*/
+    text-decoration: none;
+    color: #524c56;
+    font-weight: bold;
+    }
+    /*pseudo clase a, para cuando asas por encima del link*/
+a:hover {
+    color:#c3d7df;
+
+}
+/*estilizamos las imagenes en general*/
+ img {
+     /*con esto hago que se comporte como elemnto de bloque*/
+    display: block;
+    margin: 0 auto;
+    /*ancho maximo*/
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-bottom: -4px;
+ }
+
+#wrapper {
+    /*le doy un ancho maximo, podria usar lo de media query*/
+    max-width: 1200px;
+    /*margin:0 auto; 0 is for top-bottom and auto for left-right*/
+    margin: 0 auto;
+} 
+
+#banner-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 3% 0;
+}
+
+header {
+    /*no es como heigt, por que el ancho esta definido*/
+    width: 100%;
+    /*el height con %, sire si el cont tiene def pixeles*/
+    height: 100%;
+    top:0;
+    left:0;
+}
+
+header .header-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    /*para que td en el contenedor este centrado*/
+    align-items: center;
+    
+}
+
+header #logo img {
+    margin:20px;
+
+    /*float: left;*/
+    width:100px;
+    height:auto;
+    top:0;
+    left:0;
+}
+
+header #menu-icon{
+    display:none;
+    /*con font-zise le pones el tamaño a los iconos*/
+    font-size: 50px;
+    margin: 25px;
+}
+
+/*a todos los ul le saco los puntos*/
+ul {
+    list-style: none;
+}
+
+nav {
+    width: 40%;
+    height: auto;
+    padding: 25px, 25px,25px, 25px;
+    margin: 25px;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+ }
+
+nav ul li {
+    font-size: 110%;
+    margin: 15px;
+    
+}
+
+
+nav ul li a {
+    color: #6991ac;
+}
+
+/*current es que pagina o navegacion esta acitva*/
+nav ul li .actual {
+    color: #3f5767;
+
+}
+/*servicios uno*/
+div #first-onethird{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%,2%;
+}
+
+.servicios_para_eventos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+} 
+
+div #first-onethird .icon-wrap {
+margin: 0, auto;
+width: 125px;
+height: 125px;
+background-color: #6991ac;
+display: flex;
+flex-direction: column;
+/*lo alineo a lo largo y ancho*/
+align-items: center;
+justify-content: center;
+border-radius: 125px;
+}
+
+.icon-wrap i {
+display: flex;    
+font-size: 50px;
+border-radius: 125px;
+
+}
+
+
+/*servicios dos*/
+div #second-onethird{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div #second-onethird img {
+    width: 30%;
+    border-radius: 125px;
+}
+/*le doy color de fondo*/
+footer{
+    background: #2c3c50;
+}
+/*caja dentro del footer*/
+.icon-text{
+  
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*nav dentro del footer*/
+.icon-text-icon a{
+    color : #c3d7df;
+    font-size: 20px;
+    line-height: 150%;
+    }
+.icon-text-icon a:hover{
+    color : #f5f5f5;
+    }
+
+/*contenedor iconos dentro del footer*/    
+div .icon-text-text {
+    width: 40% ;
+    display: flex;
+    align-items: center;
+    }
+
+div .icon-text-text ul{
+    width: 100% ;
+    color : #c3d7df;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    }
+
+.icon-text-text a {
+
+        color :  #c3d7df;
+        font-size: 40px;
+        }
+
+.icon-text-text a:hover{
+    color : #f5f5f5;
+    font-size: 20px;
+    }
+}
